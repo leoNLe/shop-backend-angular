@@ -1,0 +1,13 @@
+<div>What up pup? </div>
+
+<div> <input type="text"/> <button>Search</button></div>
+
+<div> <a> Sign In CartSign</a></div>
+
+<div>
+  <a> Login </a>
+  <div class='pointer'>
+    <a (click)='toggleToShowSignup()' > Sign Up </a> </div>
+</div>
+
+<app-signup *ngIf="toShowSignup" > </app-signup>

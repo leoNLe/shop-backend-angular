@@ -1,0 +1,72 @@
+<div class="signupform-container">
+  <form [formGroup]="signupForm" (ngSubmit)="signupFormSubmit($event)" class="signupForm">
+
+    <!-- Beginning of First Name div -->
+    <label>First Name: </label>
+    <input type="text" formControlName="firstName"/> 
+      <!-- End of First Name div -->
+    <div  class="signupForm_errorMessage"
+      *ngIf="signupForm.get('firstName')?.touched && signupForm.get('firstName').errors?.required">
+        First name is required.
+    </div> 
+
+    <!-- Beginning of Last Name div -->
+    <label>Last Name: </label>
+    <input type="text" formControlName="lastName"/>
+    
+    <div class="signupForm_errorMessage"
+      *ngIf="signupForm.get('lastName')?.touched && signupForm.get('lastName').errors?.required">
+        Last name is required.
+    </div> 
+
+    <!-- Beginning of email  div -->
+    <label>Email: </label>
+    <input type="email" formControlName="email"/>
+
+    <div class="signupForm_errorMessage" 
+         *ngIf="signupForm.get('email')?.touched && signupForm.get('email').errors?.required">
+        Email is required.
+    </div> 
+    <div class="signupForm_errorMessage" 
+         *ngIf="signupForm.get('email')?.touched && signupForm.get('email').errors?.email">
+      Enter a valid email.
+    </div> 
+
+        
+        
+    <!-- Beginning of password FormGroup  div -->
+    <ng-container formGroupName="passwordGroup"> 
+      <!-- Beginning of password div -->
+        <label>Password:</label>
+        <input type="password" formControlName='password'/>
+
+       <div class="signupForm_errorMessage"
+        *ngIf="signupForm.get('passwordGroup.password')?.touched 
+         && signupForm.get('passwordGroup.password').errors?.required">
+          Password is required.
+       </div> 
+
+      <!-- Beginning of confirm password div -->
+        <label>Confirm Password: </label>
+         <input type="password" formControlName='rePassword'/>
+
+      
+      <div class="signupForm_errorMessage">
+        
+        <div *ngIf="signupForm.get('passwordGroup.rePassword')?.touched
+          && signupForm.get('passwordGroup.rePassword')?.errors?.required">
+           Confirm password is required.
+        </div>
+        <div *ngIf="signupForm.get('passwordGroup.password')?.touched 
+          && signupForm.get('passwordGroup.rePassword')?.touched 
+          && signupForm.get('passwordGroup')?.errors?.notSame" >
+          Passwords have to be the same.
+        </div> 
+      </div>   
+       
+      </ng-container> 
+  
+  <button type="submit" [disabled]="!signupForm.valid">Sign Up! </button>
+
+</form>
+<div>

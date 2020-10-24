@@ -82,6 +82,7 @@
         "named": "never"
       }
     },
+    "trailing-comma": false,
     "typedef": [
       true,
       "call-signature"
@@ -121,6 +122,8 @@
         "check-typecast"
       ]
     },
+  
+    "autoFixOnsave" : true,
     "component-class-suffix": true,
     "contextual-lifecycle": true,
     "directive-class-suffix": true,

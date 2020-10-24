@@ -1,0 +1,21 @@
+.signupform-container{
+	display: flex;
+}
+.signupForm {
+	display: grid;
+	grid-template-columns: 200px 1fr;
+}
+
+/*.signupForm_input_div {
+	display: flex;
+	justify-content: space-between;
+}*/
+.signupForm label {
+	grid-columns: 1/2;
+}
+.signupForm input, button {
+	grid-column: 2/3;
+}
+.signupForm_errorMessage {
+	grid-column: 2/3;
+}
