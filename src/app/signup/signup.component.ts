@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder,  FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
   styleUrls: ['./signup.component.css'],
-  templateUrl: './signup.component.html'
+  templateUrl: './signup.component.html',
 })
 export class SignupComponent implements OnInit {
   public signupForm;
@@ -13,17 +13,19 @@ export class SignupComponent implements OnInit {
       email: ['', [Validators.email, Validators.required]],
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      passwordGroup: this.fb.group({
-        password: ['', Validators.required],
-        rePassword: ['', Validators.required]
-      }, {
-        validator: this.confirmPassword
-      })
+      passwordGroup: this.fb.group(
+        {
+          password: ['', Validators.required],
+          rePassword: ['', Validators.required],
+        },
+        {
+          validator: this.confirmPassword,
+        }
+      ),
     });
   }
 
-  public ngOnInit(): void {
-  }
+  public ngOnInit(): void {}
 
   public signupFormSubmit(event: any): void {
     event.preventDefault();
