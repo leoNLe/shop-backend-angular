@@ -7,4 +7,5 @@
   <div class="navbar__search"><input type="text" /> <button>SBtn</button></div>
 </div>
 
-<app-signup *ngIf="toShowSignup"> </app-signup>
+<app-signup *ngIf="toShowSignup" (toggleModalEvent)="toggleToShowSignup()">
+</app-signup>

@@ -1,12 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
   styleUrls: ['./signup.component.css'],
-  templateUrl: './signup.component.html',
+  templateUrl: './signup.component.html'
 })
 export class SignupComponent implements OnInit {
+  @Output() public toggleModalEvent: EventEmitter<any> = new EventEmitter<
+    any
+  >();
+
   public signupForm;
   constructor(private fb: FormBuilder) {
     this.signupForm = this.fb.group({
@@ -16,12 +20,12 @@ export class SignupComponent implements OnInit {
       passwordGroup: this.fb.group(
         {
           password: ['', Validators.required],
-          rePassword: ['', Validators.required],
+          rePassword: ['', Validators.required]
         },
         {
-          validator: this.confirmPassword,
+          validator: this.confirmPassword
         }
-      ),
+      )
     });
   }
 
@@ -32,6 +36,9 @@ export class SignupComponent implements OnInit {
     console.log(this.signupForm.value);
   }
 
+  public toggleModal(): void {
+    this.toggleModalEvent.emit();
+  }
   public confirmPassword(group: FormGroup): any {
     console.log(group);
     const pass = group.get('password').value;
