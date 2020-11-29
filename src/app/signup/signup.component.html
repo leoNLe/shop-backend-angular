@@ -105,3 +105,10 @@
     </form>
   </div>
 </app-modal>
+
+<app-modal *ngIf="toDisplayMesage" ng-init="setFocus()">
+  <div class="message-container">
+    <p>{{ msg }}</p>
+    <button (click)="toggleMessageModal()" #messageButton>OK</button>
+  </div>
+</app-modal>
