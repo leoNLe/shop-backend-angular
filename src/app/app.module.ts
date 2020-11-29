@@ -6,7 +6,8 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {NavbarComponent} from './navbar/navbar.component';
+import { ModalComponent } from './modal/modal.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
@@ -14,14 +15,10 @@ import { SignupComponent } from './signup/signup.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    SignupComponent
+    SignupComponent,
+    ModalComponent
   ],
-  imports: [
-    BrowserModule,
-    CommonModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-  ],
-  providers: [],
+  imports: [BrowserModule, CommonModule, AppRoutingModule, ReactiveFormsModule],
+  providers: []
 })
-export class AppModule { }
+export class AppModule {}
