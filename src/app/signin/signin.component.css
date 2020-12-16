@@ -1,0 +1,27 @@
+.signinForm {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+.signinForm > * {
+  margin-bottom: 0.5rem;
+}
+
+.signinForm label {
+  grid-columns: 1/2;
+}
+
+.signinForm input {
+  grid-columns: 2/3;
+}
+
+.signinForm_errorMessage {
+  grid-column: 2/3;
+}
+
+.signinForm__buttons-container {
+  grid-columns: 1 / span 2;
+  min-width: 100%;
+  display: flex;
+  justify-content: space-around;
+}

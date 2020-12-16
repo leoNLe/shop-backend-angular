@@ -1,0 +1,34 @@
+<app-modal>
+  <form class="signinForm" [formGroup]="signinForm" (ngSubmit)="signin($event)">
+    <label> Email </label>
+    <input type="email" formControlName="email" />
+    <div
+      class="signinForm_errorMessage"
+      *ngIf="
+        signinForm.get('email')?.touched &&
+        signinForm.get('email').errors?.required
+      "
+    >
+      Email is required.
+    </div>
+    <label> Password </label>
+    <input type="password" formControlName="password" />
+    <div
+      class="signinForm_errorMessage"
+      *ngIf="
+        signinForm.get('password')?.touched &&
+        signinForm.get('password').errors?.required
+      "
+    >
+      Password is required.
+    </div>
+    <div class="signinForm__bottom-container">
+      <button type="submit">Sign In</button>
+      <button (click)="toggleModal()">Cancel</button>
+    </div>
+  </form>
+</app-modal>
+
+<app-modal *ngIf="toDisplayMesage">
+  <app-alerts [message]="msg" (toggleAlert)="toggleMsg()"> </app-alerts>
+</app-modal>
