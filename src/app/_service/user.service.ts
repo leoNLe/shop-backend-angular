@@ -12,6 +12,14 @@ export class UserService {
   private env = environment;
   constructor() {}
 
+  public signIn(user): any {
+    console.log(user);
+    return axios({
+      data: user,
+      method: 'post',
+      url: `${this.env.mainHost}/api/user/login`
+    });
+  }
   public register(user: User): any {
     console.log(this.env.mainHost);
     console.log(user);

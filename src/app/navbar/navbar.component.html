@@ -1,7 +1,7 @@
 <div class="navbar">
   <div class="navbar__logo">What up pup?</div>
   <div class="navbar__sidelink">
-    <a> Sign In </a>
+    <a (click)="toggleToShowSignIn()" class="pointer"> Sign In </a>
     <a (click)="toggleToShowSignup()" class="pointer"> Sign Up </a>
   </div>
   <div class="navbar__search"><input type="text" /> <button>SBtn</button></div>
@@ -9,3 +9,6 @@
 
 <app-signup *ngIf="toShowSignup" (toggleModalEvent)="toggleToShowSignup()">
 </app-signup>
+
+<app-signin *ngIf="toShowSignIn" (toggleModalEvent)="toggleToShowSignIn()">
+</app-signin>
