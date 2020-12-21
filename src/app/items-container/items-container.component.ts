@@ -30,7 +30,9 @@ export class ItemsContainerComponent implements OnInit {
     // advance the scroll left/right based on direction by one container width;
     this.innerItemsContainer.nativeElement.scrollTo({
       behavior: 'smooth',
-      left: direction * containerWidth
+      left:
+        this.innerItemsContainer.nativeElement.scrollLeft +
+        direction * containerWidth
     });
   }
 }
