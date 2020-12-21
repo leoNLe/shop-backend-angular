@@ -14,7 +14,12 @@
   </a>
 
   <div #itemsContainer class="itemsContainer__items">
-    <div #itemDiv *ngFor="let item of imgArr" class="item">
+    <div
+      #itemDiv
+      *ngFor="let item of imgArr"
+      class="item"
+      [routerLink]="['/product', item.id]"
+    >
       <img src="{{ item.path }}" alt="{{ item.name }}" />
       <div class="item__currency">{{ item.price | currency }}</div>
     </div>

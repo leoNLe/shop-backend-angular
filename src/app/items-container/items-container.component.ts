@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 import {
   faChevronLeft,
@@ -19,7 +20,7 @@ export class ItemsContainerComponent implements OnInit {
   public faChevronLeft = faChevronLeft;
   public faChevronRight = faChevronRight;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   public ngOnInit(): void {}
 

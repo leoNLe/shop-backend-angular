@@ -15,6 +15,7 @@ import { ModalComponent } from './modal/modal.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -26,7 +27,8 @@ import { SignupComponent } from './signup/signup.component';
     SigninComponent,
     AlertsComponent,
     LandingPageComponent,
-    ItemsContainerComponent
+    ItemsContainerComponent,
+    ProductPageComponent
   ],
   imports: [
     BrowserModule,
