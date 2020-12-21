@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
+import FeaturedImages from '../testing-images';
 @Component({
   selector: 'app-landing-page',
-  templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.css']
+  styleUrls: ['./landing-page.component.css'],
+  templateUrl: './landing-page.component.html'
 })
 export class LandingPageComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  public featuredImages;
+  constructor() {
+    this.featuredImages = FeaturedImages;
   }
 
+  public ngOnInit(): void {}
 }

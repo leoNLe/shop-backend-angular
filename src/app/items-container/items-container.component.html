@@ -1,0 +1,22 @@
+<div class="itemsContainer">
+  <label>{{ name }}</label>
+  <a
+    (click)="scrollTo(-1)"
+    class="itemsContainer__control itemsContainer__control-left"
+  >
+    <fa-icon [icon]="faChevronLeft" class="fa-2x"> </fa-icon>
+  </a>
+  <a
+    (click)="scrollTo(+1)"
+    class="itemsContainer__control itemsContainer__control-right"
+  >
+    <fa-icon [icon]="faChevronRight" class="fa-2x"> </fa-icon>
+  </a>
+
+  <div #itemsContainer class="itemsContainer__items">
+    <div #itemDiv *ngFor="let item of imgArr" class="item">
+      <img src="{{ item.path }}" alt="{{ item.name }}" />
+      <div class="item__currency">{{ item.price | currency }}</div>
+    </div>
+  </div>
+</div>
