@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { AuthenticationService } from '../_service/authentication.service';
+import { AuthenticationService } from '../_services/authentication.service';
 
 import { from } from 'rxjs';
 import { first } from 'rxjs/operators';

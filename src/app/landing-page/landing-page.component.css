@@ -1,0 +1,26 @@
+.landingpageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 900px) {
+  .landingpageContainer {
+    margin: 10px 10% 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: stretch;
+    /*needed for firefox*/
+    min-height: 0;
+    min-width: 0;
+    gap: 5px;
+  }
+  .grid-full {
+    grid-column: 1/-1;
+    min-width: 0;
+  }
+
+  .grid-quarter {
+    grid-column: span 1;
+  }
+}

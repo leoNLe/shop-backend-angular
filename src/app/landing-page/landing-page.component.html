@@ -1,4 +1,33 @@
-<div>
-  <app-items-container [name]="'Featured'" [imgArr]="featuredImages">
+<div class="landingpageContainer">
+  <app-card-display
+    [title]="'Shop'"
+    [itemsArr]="featuredImages"
+    class="grid-quarter"
+  >
+  </app-card-display>
+  <app-card-display
+    [title]="'Shop'"
+    [itemsArr]="featuredImages"
+    class="grid-quarter"
+  >
+  </app-card-display>
+  <app-card-display
+    [title]="'Shop'"
+    [itemsArr]="featuredImages"
+    class="grid-quarter"
+  >
+  </app-card-display>
+  <app-card-display
+    [title]="'Shop'"
+    [itemsArr]="featuredImages"
+    class="grid-quarter"
+  >
+  </app-card-display>
+
+  <app-items-container
+    [name]="'Featured'"
+    [imgArr]="featuredImages"
+    class="grid-full"
+  >
   </app-items-container>
 </div>

@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { UserService } from '../_service/user.service';
+import { UserService } from '../_services/user.service';
 
 @Component({
   selector: 'app-signup',

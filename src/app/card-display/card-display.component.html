@@ -1,0 +1,11 @@
+<div class="card">
+  <div *ngFor="let item of itemsArr" class="card__imageWrapper">
+    <a (click)="searchItem(item.id)">
+      <img
+        src="{{ item.path }}"
+        alt="{{ item.name }}"
+        class="card__imageWrapper__image"
+      />
+    </a>
+  </div>
+</div>

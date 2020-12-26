@@ -16,6 +16,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { CardDisplayComponent } from './card-display/card-display.component';
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -28,7 +29,8 @@ import { ProductPageComponent } from './product-page/product-page.component';
     AlertsComponent,
     LandingPageComponent,
     ItemsContainerComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    CardDisplayComponent
   ],
   imports: [
     BrowserModule,
