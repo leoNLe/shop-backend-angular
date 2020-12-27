@@ -17,6 +17,7 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { CardDisplayComponent } from './card-display/card-display.component';
+import { LoadSpinnerComponent } from './load-spinner/load-spinner.component';
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -30,7 +31,8 @@ import { CardDisplayComponent } from './card-display/card-display.component';
     LandingPageComponent,
     ItemsContainerComponent,
     ProductPageComponent,
-    CardDisplayComponent
+    CardDisplayComponent,
+    LoadSpinnerComponent
   ],
   imports: [
     BrowserModule,
