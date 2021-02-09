@@ -1,0 +1,21 @@
+<div class="image-gallery">
+  <div class="image-gallery__list">
+    <div *ngFor="let image of images; let index = index">
+      <img
+        #gallery
+        src="{{ image.path }}"
+        [ngClass]="index == 0 ? 'active' : 'hidden'"
+      />
+    </div>
+  </div>
+
+  <div class="image-gallery__thumbnail-list">
+    <div
+      class="image-gallery__thumbnail-image"
+      *ngFor="let image of images; let index = index"
+      (click)="changeActive($event, index)"
+    >
+      <img #thumbnails src="{{ image.path }}" />
+    </div>
+  </div>
+</div>

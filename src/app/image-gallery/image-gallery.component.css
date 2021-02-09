@@ -1,0 +1,34 @@
+.image-gallery {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.image-gallery__thumbnail-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-gallery__thumbnail-image {
+  width: 75px;
+  margin-right: 5px;
+}
+.image-gallery__thumbnail-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.image-gallery__thumbnail-image img:hover {
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+  margin: auto;
+}

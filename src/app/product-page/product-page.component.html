@@ -1,1 +1,23 @@
-<app-load-spinner> </app-load-spinner>
+<app-load-spinner *ngIf="!isLoaded"> </app-load-spinner>
+<div class="product" *ngIf="isLoaded">
+  <div class="product__image">
+    <app-image-gallery [images]="product.images"> </app-image-gallery>
+  </div>
+  <div class="product__info">
+    <label> {{ product?.title }}</label>
+    <p>{{ product?.price | currency }}</p>
+    <div class="ratingContainer">
+      <div>{{ product?.rating }}</div>
+      <div>{{ product?.ratingCount }}</div>
+    </div>
+  </div>
+  <div>
+    {{ product?.price | currency }}
+    <select>
+      <option>1</option>
+      <option>2</option>
+    </select>
+    <button>Add to Cart</button>
+    <button>Buy Now</button>
+  </div>
+</div>
